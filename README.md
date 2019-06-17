@@ -33,7 +33,10 @@ The client must connect user input with those operations via the protocol expose
 
 We don't have any DBAs at Cabify, so the service shouldn't use any external databases of any kind.
 
-Implement a checkout service and its client that fulfils these requirements.
+**You will need to implement:**
+
+- A checkout service
+- A checkout client that fulfils these requirements
 
 Examples:
 
