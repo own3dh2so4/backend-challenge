@@ -36,7 +36,7 @@ We don't have any DBAs at Cabify, so the service shouldn't use any external data
 **You will need to implement:**
 
 - A checkout service
-- A checkout client that fulfils these requirements
+- A checkout client that fulfills these requirements
 
 Examples:
 
