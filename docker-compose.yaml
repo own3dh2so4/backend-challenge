@@ -1,0 +1,28 @@
+version: '3'
+services:
+  go_builder:
+    image: golang:1.12
+    working_dir: /app
+    environment:
+      - CGO_ENABLED=0
+      - GOOS=linux
+    volumes:
+      - .:/app
+
+  grpc_builder:
+    image: namely/protoc-all
+    volumes:
+      - .:/defs
+
+  server:
+    build:
+      context: .
+    command: "/prueba_cabify -mode server"
+    expose:
+      - 9999
+
+  client:
+    build:
+      context: .
+    depends_on:
+      - server

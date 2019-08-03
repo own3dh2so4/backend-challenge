@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package prueba_cabify;
+
+option go_package = "basket_service";
+
+
+
+service BasketService {
+    rpc CreateBasket (CreateBasketRequest) returns (CreateBasketResponse) {}
+
+    rpc AddProduct (AddProductRequest) returns (AddProductResponse) {}
+
+    rpc GetTotalAmount (GetTotalAmountRequest) returns (GetTotalAmountResponse) {}
+
+    rpc RemoveBasket (RemoveBasketRequest) returns (RemoveBasketResponse) {}
+}
+
+message CreateBasketRequest {
+
+}
+
+message CreateBasketResponse {
+    int64 basket_id = 1;
+}
+
+message AddProductRequest {
+    int64 basket_id = 1;
+    string product_id = 2;
+}
+
+message AddProductResponse {
+
+}
+
+message GetTotalAmountRequest {
+    int64 basket_id = 1;
+}
+
+message GetTotalAmountResponse {
+    float price = 1;
+}
+
+message RemoveBasketRequest {
+    int64 basket_id = 1;
+}
+
+message RemoveBasketResponse {
+
+}
